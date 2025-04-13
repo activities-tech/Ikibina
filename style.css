@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap');
+    
+:root {
+  --gold: #FFD700;
+  --dark-blue: #363e46;
+  --black: #000;
+  --light-gold: rgba(255, 215, 0, 0.3);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: var(--dark-blue) url('img/dudu.jpg') ;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: white;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+  text-align: center;
+}
+
+/* Animated gold particles */
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.particle {
+  position: absolute;
+  background: var(--light-gold);
+  border-radius: 50%;
+  animation: float 15s infinite linear;
+}
+
+@keyframes float {
+  0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { transform: translateY(-20vh) rotate(720deg); opacity: 0; }
+}
+
+.container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  margin: 15px 0 5px;
+  color: var(--gold);
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 3vw, 1.2rem);
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.countdown-container {
+  margin: 30px auto;
+}
+
+.countdown {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 8vw, 4rem);
+  font-weight: bold;
+  color: white;
+  line-height: 1.3;
+  margin: 20px 0;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+.countdown small {
+  font-size: clamp(0.8rem, 3vw, 1.2rem);
+  color: var(--gold);
+  display: block;
+  margin-top: 5px;
+  font-weight: normal;
+}
+
+.photo-circle {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.friend {
+  width: clamp(70px, 20vw, 120px);
+  height: clamp(70px, 20vw, 120px);
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  object-fit: cover;
+  box-shadow: 0 0 15px var(--light-gold);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.friend:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.7);
+}
+
+.friend::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 2px solid var(--gold);
+  top: -5px;
+  left: -5px;
+  animation: pulse 2s infinite;
+  pointer-events: none;
+  opacity: 0.5;
+}
+
+@keyframes pulse {
+  0% { transform: scale(0.95); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 0.2; }
+  100% { transform: scale(0.95); opacity: 0.5; }
+}
+
+.burj-silhouette {
+  width: 100%;
+  height: 100px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none"><path fill="rgba(255,215,0,0.1)" d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" opacity=".25"></path><path fill="rgba(255,215,0,0.1)" d="M0,0V15.81C13,36.92,27.64,56.86,47.69,72.05,99.41,111.27,165,111,224.58,91.58c31.15-10.15,60.09-26.07,89.67-39.8,40.92-19,84.73-46,130.83-49.67,36.26-2.85,70.9,9.42,98.6,31.56,31.77,25.39,62.32,62,103.63,73,40.44,10.79,81.35-6.69,119.13-24.28s75.16-39,116.92-43.05c59.73-5.85,113.28,22.88,168.9,38.84,30.2,8.66,59,6.17,87.09-7.5,22.43-10.89,48-26.93,60.65-49.24V0Z" opacity=".5"></path><path fill="rgba(255,215,0,0.1)" d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z"></path></svg>');
+  background-size: cover;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 1;
+}
+
+/* Message Popup Styles */
+.message-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 45, 74, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.message-popup.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.message-content {
+  background: rgba(0, 0, 0, 0.8);
+  border: 2px solid var(--gold);
+  border-radius: 15px;
+  padding: 25px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(5px);
+}
+
+.message-popup.active .message-content {
+  transform: scale(1);
+}
+
+.message-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  object-fit: cover;
+  margin: 0 auto 15px;
+  box-shadow: 0 0 20px var(--light-gold);
+}
+
+.message-name {
+  font-family: 'Playfair Display', serif;
+  color: var(--gold);
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.message-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.close-btn {
+  background: var(--gold);
+  color: var(--dark-blue);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
+}
+
+@media (max-width: 768px) {
+  .burj-silhouette {
+    height: 70px;
+  }
+  
+  .message-content {
+    padding: 20px;
+  }
+  
+  .message-photo {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .message-name {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .photo-circle {
+    gap: 10px;
+  }
+  
+  .message-photo {
+    width: 80px;
+    height: 80px;
+  }
+  
+  .message-name {
+    font-size: 1.3rem;
+  }
+  
+  .message-text {
+    font-size: 1rem;
+  }
+}

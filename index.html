@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ikibina DUBAI 2030</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="js.js">
+  
+</head>
+<body>
+  <!-- Animated gold particles -->
+  <div class="particles" id="particles"></div>
+  
+  <div class="container">
+    <h1>Ikibina DUBAI 2030</h1>
+    <p class="subtitle">Our golden adventure begins in...</p>
+    
+    <div class="countdown-container">
+      <div class="countdown" id="timer">
+        000 <small>days</small><br>
+        00 <small>hours</small><br>
+        00 <small>minutes</small>
+      </div>
+    </div>
+    
+    <div class="photo-circle">
+      <!-- Friend photos with click handlers and personalized messages -->
+      <img src="img/shema.png" class="friend" alt="Shema" 
+           onclick="showMessage('Shema', 'img/shema.png', 'Ihene kwisoga  &#128016;! uzazane ishu ujyende urisha mubutayu ntayahaba 	&#128514; ⚠️Remember to save💸.')">
+      
+      <img src="img/kwizera.png" class="friend" alt="Kwizera" 
+           onclick="showMessage('Kwizera', 'img/kwizera.png', 'Head boy uzatuzanire Jeto turiraho wana 	&#128514;⚠️Remember to save💸')">
+      
+      <img src="img/allycam.png" class="friend" alt="Allycam" 
+           onclick="showMessage('Allycam', 'img/allycam.png', 'Sheikh tuzahave bose wabinjije indini Inshallah👼 ⚠️Remember to save💸')">
+      
+      <img src="img/ebed.png" class="friend" alt="Ebed" 
+           onclick="showMessage('Ebed', 'img/ebed.png', 'MR Wazana impamvu , utazizana tuzanjyana 	&#128514  Kandi nukumanuka nkabahamya 🧑‍💼 ⚠️Remember to save💸')">
+      
+      <img src="img/gatashya.png" class="friend" alt="Gatashya" 
+           onclick="showMessage('Gatashya', 'img/gatashya.png', 'Nyagatare Boy	&#128514; Nzazana Telemusi mwana uzazane ibikombe	&#128514;⚠️Remember to save💸')">
+      
+      <img src="img/maxine.png" class="friend" alt="Maxine" 
+           onclick="showMessage('Maxine', 'img/maxine.png', 'Umwana wa Depite azazana cash nyishi uko bimeze 	&#128514;⚠️Remember to save💸')">
+      
+      <img src="img/lewis.png" class="friend" alt="Lewis" 
+           onclick="showMessage('Lewis', 'img/lewis.png', 'Kurwana uzaba ubiretse Mr Boyka &#128514  Ahubwo tuzahamirize  ⚠️Remember to save💸')">
+      
+      <img src="img/sangwa.png" class="friend" alt="Sangwa" 
+           onclick="showMessage('Sangwa', 'img/sangwa.png', 'Bosere twagiye 	&#128514;⚠️Remember to save💸')">
+      <img src="img/kevin.jpeg" class="friend" alt="Kevin" 
+           onclick="showMessage('Kevin', 'img/kevin.jpeg', 'Tuzakoresha zimwe muri BEnz zanyu boss &#128514;⚠️Remember to save💸')">
+    </div>
+  </div>
+  
+  <div class="burj-silhouette"></div>
+
+  <!-- Message Popup -->
+  <div class="message-popup" id="messagePopup">
+    <div class="message-content">
+      <img class="message-photo" id="popupPhoto" src="" alt="Friend">
+      <h2 class="message-name" id="popupName"></h2>
+      <p class="message-text" id="popupMessage"></p>
+      <button class="close-btn" onclick="hideMessage()">Close</button>
+    </div>
+  </div>
+  <script src="js.js"></script>
+
+  
+  
+</body>
+</html>
