@@ -48,6 +48,13 @@
     document.getElementById('popupMessage').textContent = message;
     document.getElementById('messagePopup').classList.add('active');
     document.body.style.overflow = 'hidden';
+
+
+       // Set up WhatsApp button
+       const whatsappBtn = document.getElementById('whatsappBtn');
+       whatsappBtn.onclick = function() {
+         window.open(`https://chat.whatsapp.com/KeimGL4ZPr16n7HkEUhCwK`, '_blank');
+       }; 
     
     // Pulse animation on click
     event.target.style.animation = 'none';
@@ -61,6 +68,8 @@
     document.body.style.overflow = 'auto';
   }
   
+  // In your showMessage function:
+  document.getElementById('whatsappBtn').href = "https://chat.whatsapp.com/KeimGL4ZPr16n7HkEUhCwK";
   // Initialize everything when page loads
   window.addEventListener('load', () => {
     createParticles();
@@ -74,3 +83,8 @@
       hideMessage();
     }
   });
+
+
+
+
+  

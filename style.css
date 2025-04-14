@@ -1,10 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;500&display=swap');
     
 :root {
   --gold: #FFD700;
   --dark-blue: #363e46;
   --black: #000;
   --light-gold: rgba(255, 215, 0, 0.3);
+  --whatsapp-green: #25D366;
 }
 
 body {
@@ -228,6 +230,33 @@ h1 {
   box-shadow: 0 5px 15px rgba(255, 215, 0, 0.4);
 }
 
+
+
+.whatsapp-btn {
+  background: var(--whatsapp-green);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 10px 25px;
+  border-radius: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.popup-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+.popup-btn i {
+  font-size: 25px;
+  
+}
+.whatsapp-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(51, 243, 3, 0.4);
+}
+
 @media (max-width: 768px) {
   .burj-silhouette {
     height: 70px;
@@ -265,3 +294,12 @@ h1 {
     font-size: 1rem;
   }
 }
+
+
+
+
+
+
+
+
+
